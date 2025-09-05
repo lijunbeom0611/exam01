@@ -1,44 +1,29 @@
 package dto;
 
 public class LjbDto {
-	 private String resvNo;
-     private String custNo;
-     private String resvDate;
-     private String courtNo;
-     
-     public LjbDto() {
-     }
-   
-     public LjbDto(String resvNo, String custNo, String resvDate, String courtNo) {
-         this.resvNo = resvNo;
-         this.custNo = custNo;
-         this.resvDate = resvDate;
-         this.courtNo = courtNo;
-     }
-	public String getResvNo() {
-		return resvNo;
-	}
-	public void setResvNo(String resvNo) {
-		this.resvNo = resvNo;
-	}
-	public String getCustNo() {
-		return custNo;
-	}
-	public void setCustNo(String custNo) {
-		this.custNo = custNo;
-	}
-	public String getResvDate() {
-		return resvDate;
-	}
-	public void setResvDate(String resvDate) {
-		this.resvDate = resvDate;
-	}
-	public String getCourtNo() {
-		return courtNo;
-	}
-	public void setCourtNo(String courtNo) {
-		this.courtNo = courtNo;
-	}
-     
-     
+    private String rentalNo;
+    private String studentNo;
+    private String rentalDate;
+    private String uniformSize;
+    
+    public LjbDto() {}
+    
+    public LjbDto(String rentalNo, String studentNo, String rentalDate, String uniformSize) {
+        this.rentalNo = rentalNo;
+        this.studentNo = studentNo;
+        this.rentalDate = rentalDate;
+        this.uniformSize = uniformSize;
+    }
+
+    public String getRentalNo() { return rentalNo; }
+    public void setRentalNo(String rentalNo) { this.rentalNo = rentalNo; }
+
+    public String getStudentNo() { return studentNo; }
+    public void setStudentNo(String studentNo) { this.studentNo = studentNo; }
+
+    public String getRentalDate() { return rentalDate; }
+    public void setRentalDate(String rentalDate) { this.rentalDate = rentalDate; }
+
+    public String getUniformSize() { return uniformSize; }
+    public void setUniformSize(String uniformSize) { this.uniformSize = uniformSize; }
 }

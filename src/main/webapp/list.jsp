@@ -5,59 +5,39 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>체육복 대여 목록</title>
 <style>
-* {
-	margin: 0;
-	padding: 0;
-}
-
-section {
-	width: 100%;
-	height: calc(100vh - 160px);
-	background-color: lightgray;
-}
-
-section h2 {
-	text-align: center;
-	padding: 20px;
-}
-
-section div {
-	display: flex;
-	justify-content: center;
-}
-
-td {
-	text-align: center;
-}
+* {margin:0;padding:0;}
+section {width:100%;height:calc(100vh - 160px);background-color:lightgray;}
+section h2 {text-align:center;padding:20px;}
+section div {display:flex;justify-content:center;}
+td {text-align:center;}
 </style>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
-	<jsp:include page="nav.jsp"></jsp:include>
+	<jsp:include page="header.jsp"/>
+	<jsp:include page="nav.jsp"/>
 	<section>
-		<h2>예약 정보 목록</h2>
+		<h2>체육복 대여 목록</h2>
 		<div>
-
 			<table border="1">
 				<tr>
-					<th>예약번호</th>
-					<th>고객번호</th>
-					<th>예약일</th>
-					<th>코트번호</th>
+					<th>대여번호</th>
+					<th>학생번호</th>
+					<th>대여일</th>
+					<th>사이즈</th>
 				</tr>
 				<c:forEach var="dto" items="${list}">
 					<tr>
-						<td>${dto.resvNo}</td>
-						<td>${dto.custNo}</td>
-						<td>${dto.resvDate}</td>
-						<td>${dto.courtNo}</td>
+						<td>${dto.rentalNo}</td>
+						<td>${dto.studentNo}</td>
+						<td>${dto.rentalDate}</td>
+						<td>${dto.uniformSize}</td>
 					</tr>
 				</c:forEach>
 			</table>
 		</div>
 	</section>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

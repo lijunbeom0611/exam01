@@ -12,4 +12,4 @@ insert into tbl_rental values('R20230004', 'S1004', '20230903', 'M');
 insert into tbl_rental values('R20230005', 'S1005', '20230904', 'L');
 
 drop table tbl_resv;
-select * from tbl_resv;
+select * from tbl_rental;
