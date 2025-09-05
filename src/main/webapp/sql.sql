@@ -1,15 +1,15 @@
-create table tbl_resv(
-	resv_no char(8) not null primary key,
-	resv_date char(8),
-	court_no char(4),
-	cust_no char(4)
+create table tbl_rental(
+	rental_no char(10) not null primary key,
+	student_no char(6),
+	rental_date char(8),
+	uniform_size varchar2(5)
 );
 
-insert into TBL_RESV values('20230001', '20230101', 'C001', '1005');
-insert into TBL_RESV values('20230002', '20230101', 'C002', '1004');
-insert into TBL_RESV values('20230003', '20230101', 'C003', '1003');
-insert into TBL_RESV values('20230004', '20230101', 'C004', '1002');
-insert into TBL_RESV values('20230005', '20230101', 'C005', '1001');
+insert into tbl_rental values('R20230001', 'S1001', '20230901', 'M');
+insert into tbl_rental values('R20230002', 'S1002', '20230901', 'L');
+insert into tbl_rental values('R20230003', 'S1003', '20230902', 'XL');
+insert into tbl_rental values('R20230004', 'S1004', '20230903', 'M');
+insert into tbl_rental values('R20230005', 'S1005', '20230904', 'L');
 
 drop table tbl_resv;
 select * from tbl_resv;
