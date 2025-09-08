@@ -46,4 +46,30 @@ public class LjbDao {
         }
         return list;
     }
+
+
+	public LjbDto selectRentalByNo(String rentalNo) {
+	    LjbDto dto = null;
+	    try {
+	        conn = DBUtil.getConnection();
+	        String sql = "SELECT * FROM tbl_rental WHERE rental_no = ?";
+	        pstmt = conn.prepareStatement(sql);
+	        pstmt.setString(1, rentalNo);
+	        rs = pstmt.executeQuery();
+	
+	        if (rs.next()) {
+	        	dto = new LjbDto(
+	        	        rs.getString("rental_no"),
+	        	        rs.getString("student_no"),
+	        	        rs.getString("rental_date"),
+	        	        rs.getString("uniform_size")
+	        	    );
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.close(conn, pstmt, rs);
+	    }
+	    return dto;
+	}
 }

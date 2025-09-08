@@ -21,9 +21,8 @@ nav a {
 </head>
 <body>
 	<nav>
-		<a href="insert.jsp">코트예약</a>
-		<a href="resvlist.jsp">코트예약조회</a>
-		<a href="count.jsp">사용일수조회</a>
+		<a href="insert.jsp">체육복 대여 예약</a>
+		<a href="search.jsp">체육복 대여 조회</a>
 		<a href="index.jsp">홈으로</a>
 	</nav>
 </body>

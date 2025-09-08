@@ -19,7 +19,7 @@ header{
 </head>
 <body>
 <header>
-		<h2>(과정평가형 정보처리산업기사)배드민턴 코트예약 관리프로그램 ver 2023-01</h2>
+		<h2>체육복 대여 프로그램 ver 2025-09</h2>
 	</header>
 </body>
 </html>
